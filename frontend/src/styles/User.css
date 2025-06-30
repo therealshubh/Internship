@@ -1,0 +1,307 @@
+/* Remove all CSS that interferes with the current implementation */
+/* The user has implemented proper inline styling for clear buttons and layout */
+
+/* User Component Styles */
+
+/* Main container */
+.user-container {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+/* Sidebar styles */
+.user-sidebar {
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  border-right: 1px solid #dee2e6;
+  flex-shrink: 0;
+}
+
+/* Search form styles */
+.search-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Input container with relative positioning for clear button */
+.input-container {
+  position: relative;
+}
+
+/* Input field styles */
+.search-input {
+  width: 100%;
+  padding: 0.75rem 2.5rem 0.75rem 0.75rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  box-sizing: border-box;
+  height: 2.5rem;
+}
+
+.search-input:focus {
+  border-color: #86b7fe;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* Clear button styles */
+.clear-button {
+  position: absolute;
+  top: calc(50% + 0.25rem);
+  right: 0.75rem;
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  color: #6c757d;
+  cursor: pointer;
+  padding: 0;
+  border-radius: 50%;
+  width: 1.25rem;
+  height: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+  line-height: 1;
+}
+
+.clear-button:hover {
+  color: #495057;
+}
+
+.clear-button:active {
+  color: #212529;
+}
+
+/* Label styles */
+.form-label {
+  font-weight: 500;
+  color: #495057;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+
+/* Search button styles */
+.search-btn {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  transition: all 0.15s ease-in-out;
+}
+
+.search-btn:hover {
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+}
+
+.search-btn:active {
+  background-color: #0a58ca;
+  border-color: #0a53be;
+}
+
+/* Results panel styles */
+.results-panel {
+  padding: 1.5rem;
+  overflow-y: auto;
+  background-color: white;
+}
+
+/* Results grid */
+.results-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+/* Event card styles */
+.event-card {
+  width: 250px;
+  height: 350px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  background-color: white;
+  border: 1px solid #dee2e6;
+}
+
+.event-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.event-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.event-card-body {
+  padding: 1rem;
+}
+
+.event-card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #212529;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.event-card-text {
+  font-size: 0.875rem;
+  color: #6c757d;
+  margin-bottom: 0.25rem;
+}
+
+.event-card-date {
+  font-weight: 500;
+  color: #495057;
+}
+
+/* Message styles */
+.message {
+  color: #6c757d;
+  font-style: italic;
+}
+
+.no-results {
+  color: #dc3545;
+  font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .user-sidebar {
+    width: 100% !important;
+    min-width: auto !important;
+    max-width: none !important;
+  }
+  
+  .results-panel {
+    width: 100% !important;
+  }
+  
+  .event-card {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* Modal styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.modal-content {
+  background-color: white;
+  border-radius: 0.5rem;
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #dee2e6;
+  background-color: #f8f9fa;
+}
+
+.modal-header h4 {
+  margin: 0;
+  color: #212529;
+  font-weight: 600;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #6c757d;
+  cursor: pointer;
+  padding: 0;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out;
+}
+
+.modal-close:hover {
+  background-color: #e9ecef;
+  color: #495057;
+}
+
+.modal-body {
+  padding: 1.5rem;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.modal-image {
+  width: 100%;
+  max-height: 60vh;
+  object-fit: contain;
+  border-radius: 0.375rem;
+  margin-bottom: 1rem;
+}
+
+.modal-info {
+  margin-top: 1rem;
+}
+
+.modal-info p {
+  margin-bottom: 0.5rem;
+  color: #495057;
+}
+
+.modal-footer {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid #dee2e6;
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Responsive modal adjustments */
+@media (max-width: 768px) {
+  .modal-content {
+    max-width: 95vw;
+    max-height: 95vh;
+  }
+  
+  .modal-header,
+  .modal-body,
+  .modal-footer {
+    padding: 1rem;
+  }
+  
+  .modal-image {
+    max-height: 50vh;
+  }
+}
