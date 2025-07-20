@@ -52,12 +52,12 @@ Follow these steps to set up and run the application on your local machine:
 
   In the shell, run the following command to create the database:
 
-       use gallerydb
+    use gallerydb
        
   Then create the required collections:
   
-        db.createCollection("users")
-        db.createCollection("events")
+    db.createCollection("users")
+    db.createCollection("events")
 
 
 
