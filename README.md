@@ -15,6 +15,7 @@ Follow these steps to set up and run the application on your local machine:
     👉 https://www.mongodb.com/try/download/community
 
 **✅ Step 3: Set Up Environment Variables**
+  
   After installation:
   Go to **System Properties > Environment Variables**
   Under **System variables**, find the Path variable and click **Edit**
