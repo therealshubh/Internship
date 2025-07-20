@@ -6,9 +6,9 @@ Follow these steps to set up and run the application on your local machine:
   
   Clone the project directory from GitHub to your local system using the following command:
     
-    *git clone <repository-url>*
+    git clone <repository-url>
     
-    *Replace <repository-url> with the actual link to the repository.
+  Replace <repository-url> with the actual link to the repository.
 
 
 **✅ Step 2: Install MongoDB**
@@ -23,7 +23,7 @@ Follow these steps to set up and run the application on your local machine:
   
   You can download them from the official website:
   
-    👉 https://www.mongodb.com/try/download/community
+  https://www.mongodb.com/try/download/community
 
 
 **✅ Step 3: Set Up Environment Variables**
@@ -36,29 +36,29 @@ Follow these steps to set up and run the application on your local machine:
   
   Add the following path (adjust it based on your installation version and location):
   
-    *C:\Program Files\MongoDB\Server\8.0\bin*
+    C:\Program Files\MongoDB\Server\8.0\bin
 
 
 **✅ Step 4: Verify MongoDB Installation**
    
    Open Command Prompt and run:
    
-    *mongosh*
+    mongosh
     
-    *If you see the MongoDB shell prompt, your setup is successful.
+  If you see the MongoDB shell prompt, your setup is successful.
 
 
 **✅ Step 5: Create the Database and Collections**
 
 1. In the shell, run the following command to create the database:
 
-   *use gallerydb*
+   use gallerydb
 
 2. Then create the required collections:
 
-   *db.createCollection("users")
+   db.createCollection("users")
 
-    db.createCollection("events")*
+    db.createCollection("events")
 
 
 
