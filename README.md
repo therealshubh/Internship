@@ -50,14 +50,14 @@ Follow these steps to set up and run the application on your local machine:
 
 **✅ Step 5: Create the Database and Collections**
 
-  1. In the shell, run the following command to create the database:
+  In the shell, run the following command to create the database:
 
        use gallerydb
-
-  2. Then create the required collections:
-
-       db.createCollection("users")
-       db.createCollection("events")
+       
+  Then create the required collections:
+  
+        db.createCollection("users")
+        db.createCollection("events")
 
 
 
